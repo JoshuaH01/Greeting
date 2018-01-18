@@ -1,0 +1,8 @@
+updateSbtClassifiers
+test
+testOnly *Simplecalc*
+test
+run
+test
+run
+test
