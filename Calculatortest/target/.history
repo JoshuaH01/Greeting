@@ -6,3 +6,9 @@ run
 test
 run
 test
+updateSbtClassifiers
+compile
+test
+sbt
+sbt-idea
+test

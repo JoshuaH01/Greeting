@@ -4,7 +4,7 @@
 		module="calculatortest$sbt_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180117143932"
+		publication="20180118121518"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
