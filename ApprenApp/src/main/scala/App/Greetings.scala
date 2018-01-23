@@ -10,33 +10,26 @@ class Person(name:String, age:Int) {
     if(name =="Joshua") {
       "You don't get a hello!!!"
     } else {
-      "hello " + name
+      "hello " + name + ",you are " + age + " years old"
     }
   }
+ }
+
+object Greetings extends App {
+
 
   object Prompt {
 
     def ask(message: String) : String = StdIn.readLine(message)
 
   }
-}
 
-object Greetings extends App {
-
- /* def greet(name: String): Unit = {
-    if (name == "Joshua") {
-      println("You don't get a hello.")
-    } else {
-      println("Hello " + name)
-
-    }
-  }*/
 
     val name : String = Prompt.ask("What is your name? ")
+  val age = Prompt.ask("How old are you?")
 
-    val p = new Person(name)
-
-    println(p.speak())
+    val p = new Person(name,age.toInt)
+  println(p.speak())
 
 
   }
