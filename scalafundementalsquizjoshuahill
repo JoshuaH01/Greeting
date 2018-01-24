@@ -1,0 +1,35 @@
+Quiz - scala
+Fundamentals - part 1 - Joshua Hill
+
+1 - Simple build tool 1
+
+2 - Imports code/definitions from another source and implements it in your code
+. 1/2
+
+3 - def - define a function 1
+    val - giving a value to a string or int 0
+    var - is a variable, so this can change depending o nthe input 1
+
+4 - println prints to the consol and print does not 0
+
+5 - git add - git command - git push - git status 1 
+
+6 -  a gitignore file is ignored when pushing chnages to your git repo so anything inside will not be pushed up. 1 
+
+7- little and often but meangingful commits. 1
+
+8 - 1. 0
+
+9 - A function is a self contained block of code that will take in vales and process them to give a result. 1
+
+10 - It has given a value to the word name, when name is called that code will be used. 0
+
+11 - String 0
+
+12 - Unit 0
+
+13 - stand in 0
+
+14 - print line who are you? 1
+
+
