@@ -2,15 +2,15 @@ package Project
 
 object Runt extends App {
 
-  val wolf: Animal = new Wolf("Wolf")
+  val Wolf: Animal = new Wolf("Wolf")
   val borderTerrier: BorderTerrier = new BorderTerrier("","Hunts rabbits")
-  val persionCat: PersionCat = new PersionCat("","Meow")
+  val persianCat: PersianCat = new PersianCat("","Meow")
   val meowth: Meowth = new Meowth("",10)
 
-  println("wolf: "+wolf.Speak)
+  println("wolf: "+Wolf.Speak)
   println("Border Terrier: " +borderTerrier.Speak)
-  println("Border Terrier " +borderTerrier.Hunt)
-  println("Persion Cat " +persionCat.Speak)
+  println("Border Terrier: " +borderTerrier.Hunt)
+  println("Persian Cat " +persianCat.Speak)
   println(meowth.Greet)
 }
 
@@ -30,7 +30,7 @@ object Runt extends App {
 
   class Cat(name:String, whatISpeak:String) extends Animal (name, whatISpeak = "Hello")
 
-  class PersionCat(name:String, whatISpeak:String) extends Cat(name,"Meow")
+  class PersianCat(name:String, whatISpeak:String) extends Cat(name,"Meow")
 
   class Meowth(name:String, coin:Int) extends Cat(name,"Thats right!") {
     def Greet : String = {
