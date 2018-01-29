@@ -6,10 +6,10 @@ final class CashISASavingsAccount
   override def deposit(amount: Double): BankAccount = new SavingsAccount(accountNumber, balance + amount) {
 
 
-      if (amount > depositThreshold) {
-      val difference = amount - depositThreshold
-      println(s"You cant put more than £$depositThreshold, Excess: $difference")
-      new CashISASavingsAccount(accountNumber, balance + depositThreshold)
+      if (amount > depositThreshhold) {
+      val difference = amount - depositThreshhold
+      println(s"You cant put more than £$depositThreshhold, Excess: $difference")
+      new CashISASavingsAccount(accountNumber, balance + depositThreshhold)
     } else {
       new CashISASavingsAccount(accountNumber, balance + amount)
     }
