@@ -22,38 +22,43 @@ final class CashISASavingsAccount (accountNumber: String, balance: Double) exten
   }
 }
 
-class Person(name:String, age:Int) {
+class Person(name:String, age:Int, private val bankAccount: BankAccount) {
 
-  def speak() : String = {
-    if(name =="Joshua") {
+  def this(name: String, age: Int) = this(name, age, new SavingsAccount("123", 0.00))
+  def this(name:String) = this(name, 0, new SavingsAccount("123", 0.00))
+
+
+  private val years: String = if (age == 1) "Year" else "Years"
+
+  def speak(): String = {
+    if (name == "Joshua") {
       "You don't get a hello!!!"
     } else {
-      "hello " + name + ",you are " + age + " years old"
+      s"Hello $name, you are $age $years old. \n You have ${bankAccount.balance} in your account."
     }
   }
-  private val years	: String = if (age == 1) "years" else "year"
- }
 
-object Prompt {
+  object Prompt {
 
-  def ask(message: String) : String = StdIn.readLine(message)
-
-}
-
-object Greetings extends App {
-
-
-
-
-//    val n : String = Prompt.ask("What is your name? ")
-//  val a = Prompt.ask("How old are you?")
-//
-//    val p = new Person(n,a.toInt)
-//  println(p.speak())
-
-  val accountNumber = "12345"
-  val account = new CashISASavingsAccount(accountNumber, 100.00)
-  val afterWithdraw = account.withdraw(100.00)
+    def ask(message: String): String = StdIn.readLine(message)
 
   }
+
+  object Greetings extends App {
+
+
+    val accountNumber = "12345"
+    val account = new CashISASavingsAccount(accountNumber, 100.00)
+
+    val name : String = prompt.ask("What is your name? ")
+    val gae : String = promt.ask("How old are you? ")
+
+    val afterWithdraw = account.withdraw(100.00)
+
+    val p = Person = new Person(name, age.toint)
+    val child = new Person("Jade")
+
+    println(p.speak())
+  }
+}
 
