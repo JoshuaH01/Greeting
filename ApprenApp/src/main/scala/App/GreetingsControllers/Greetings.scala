@@ -2,7 +2,7 @@ package App.GreetingsControllers
 
 object Greetings extends App {
 
-import App.Models.{BankAccount, CashISASavingsAccount, Person}
+    import App.Models.{BankAccount, CashISASavingsAccount, Person}
 
 
     val accountNumber = "12345"
@@ -24,4 +24,6 @@ import App.Models.{BankAccount, CashISASavingsAccount, Person}
     val child = new Person("Jade")
 
     println(personWithCashISA.speak())
-  }
+
+
+}

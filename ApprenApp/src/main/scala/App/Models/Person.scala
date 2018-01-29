@@ -1,12 +1,12 @@
 package App.Models
 
-class Person(name:String, age:Int, private val bankAccount: BankAccount) {
+class Person(name:String, age:Int, private val accounts: Seq[BankAccount] = Nil {
 
-  private val excludedNames : List[String] = List("Joshua", "Jade", "Gavin", "Gemma")
+  private val excludeNames : List[String] = List("Joshua", "Jade", "Gavin", "Gemma")
 
-  def this(name: String, age: Int) = this(name, age, new SavingsAccount("123", 0.00))
+  def this(name: String, age: Int) = this(name, age, accounts = List(new SavingsAccount("123", 0.00)))
 
-  def this(name: String) = this(name, 0, new SavingsAccount("123", 0.00))
+  def this(name: String) = this(name, 0, accounts = List(new SavingsAccount("123", 0.00)))
 
 
   private val years: String = if (age == 1) "Year" else "Years"
@@ -20,3 +20,6 @@ class Person(name:String, age:Int, private val bankAccount: BankAccount) {
 
   }
 }
+
+
+
