@@ -12,7 +12,7 @@ object Greetings extends App {
     val iSADeposit: BankAccount = cashISA.deposit(200.00)
     val withdrawFromISA: BankAccount = cashISA.withdraw(100.00)
 
-    val personWithCashISA = new Person("Loyal customer", 56, withdrawFromISA)
+    val personWithCashISA = new Person("Loyal customer", 56, Seq(withdrawFromISA))
     val personWithCashISA2 = new CashISASavingsAccount("12345678", 0.00, depositThreshhold = 1000.00).deposit(1000.00).withdraw(300.00)
 
     /* val whatisname : String = prompt.ask("What is your name? ")
